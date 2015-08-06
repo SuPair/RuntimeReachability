@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "RutimeReachability.h"
 
-@interface ViewController ()
+
+@interface ViewController ()<RutimeReachabilityDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *state;
 
 @end
 
@@ -17,11 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [RutimeReachability sharedManger].delegate = self;
 }
+
+- (void)netWorkStateChangeByType:(NSString *)type{
+
+       self.state.text = [NSString stringWithFormat:@"状态吗:%@",type];
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 @end

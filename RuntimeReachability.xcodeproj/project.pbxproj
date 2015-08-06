@@ -14,6 +14,7 @@
 		C66581B81B73358800508C59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66581B71B73358800508C59 /* Images.xcassets */; };
 		C66581BB1B73358800508C59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66581B91B73358800508C59 /* LaunchScreen.xib */; };
 		C66581C71B73358900508C59 /* RuntimeReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C66581C61B73358900508C59 /* RuntimeReachabilityTests.m */; };
+		C66581D31B73360C00508C59 /* RutimeReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C66581D21B73360C00508C59 /* RutimeReachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		C66581C01B73358800508C59 /* RuntimeReachabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeReachabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66581C51B73358900508C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66581C61B73358900508C59 /* RuntimeReachabilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeReachabilityTests.m; sourceTree = "<group>"; };
+		C66581D11B73360C00508C59 /* RutimeReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RutimeReachability.h; sourceTree = "<group>"; };
+		C66581D21B73360C00508C59 /* RutimeReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RutimeReachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		C66581A91B73358800508C59 /* RuntimeReachability */ = {
 			isa = PBXGroup;
 			children = (
+				C66581D01B7335D400508C59 /* RTReachability */,
 				C66581AE1B73358800508C59 /* AppDelegate.h */,
 				C66581AF1B73358800508C59 /* AppDelegate.m */,
 				C66581B11B73358800508C59 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				C66581C51B73358900508C59 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C66581D01B7335D400508C59 /* RTReachability */ = {
+			isa = PBXGroup;
+			children = (
+				C66581D11B73360C00508C59 /* RutimeReachability.h */,
+				C66581D21B73360C00508C59 /* RutimeReachability.m */,
+			);
+			name = RTReachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				C66581B31B73358800508C59 /* ViewController.m in Sources */,
 				C66581B01B73358800508C59 /* AppDelegate.m in Sources */,
+				C66581D31B73360C00508C59 /* RutimeReachability.m in Sources */,
 				C66581AD1B73358800508C59 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
