@@ -21,11 +21,13 @@
 @end
 @interface RutimeReachability : NSObject
 
-@property (nonatomic, assign) BOOL isStart;
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, assign) BOOL isStart;      //是否是处于运行状态
+#pragma 通知会发送几种模式 0.GPRS 1.2G 2.3G 3.4G 5.WiFi 6.飞行模式 7.无网络状态
+@property (nonatomic, strong) NSString *type;    //网络状态类型
+@property (nonatomic, assign) BOOL netEnable;    //是否有网
 @property (nonatomic, assign) id<RutimeReachabilityDelegate>delegate;
 
-#pragma 通知会发送几种模式 0.GPRS 1.2G 2.3G 3.4G 5.WiFi 6.飞行模式
+
 /**
  *  单利方法
  *

@@ -36,7 +36,6 @@
         dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
         dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, reSecond * NSEC_PER_SEC, 0);
         dispatch_source_set_event_handler(timer, ^{
-            
             if (weakSelf.isStart == NO) {
                 dispatch_source_cancel(timer);
             }else{
@@ -46,6 +45,7 @@
                     
                     id child = children[i];
                     if ([child isKindOfClass:NSClassFromString(@"UIStatusBarDataNetworkItemView")]) {
+                        weakSelf.netEnable = YES;
                         id type = [child valueForKeyPath:@"dataNetworkType"];
                         NSString *myType = [NSString stringWithFormat:@"%@",type];
                         if (weakSelf.type == nil) {
@@ -64,9 +64,16 @@
                             break;
                         }
                     }else if (i == children.count - 1 && ![child isKindOfClass:NSClassFromString(@"UIStatusBarDataNetworkItemView")]){
-                        weakSelf.type = [NSString stringWithFormat:@"%d",6];
+                        weakSelf.netEnable = NO;
+                        int type = 0;
+                        if (children.count == 6) {
+                            type = 6;
+                        }else if (children.count == 7){
+                            type = 7;
+                        }
+                        weakSelf.type = [NSString stringWithFormat:@"%d",type];
                         dispatch_sync(dispatch_get_main_queue(), ^{
-                            [weakSelf.delegate netWorkStateChangeByType:@"6"];
+                            [weakSelf.delegate netWorkStateChangeByType:[NSString stringWithFormat:@"%d",type]];
                         });
                         break;
                     }

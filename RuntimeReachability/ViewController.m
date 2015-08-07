@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "RutimeReachability.h"
-
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @interface ViewController ()<RutimeReachabilityDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *state;
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     // Do any additional setup after loading the view, typically from a nib.
     [RutimeReachability sharedManger].delegate = self;
 }
@@ -26,6 +28,20 @@
 - (void)netWorkStateChangeByType:(NSString *)type{
 
        self.state.text = [NSString stringWithFormat:@"状态吗:%@",type];
+    
+    CFArrayRef arrayRef = CNCopySupportedInterfaces();
+    NSArray *interfaces = (__bridge NSArray *)arrayRef;
+    NSLog(@"interfaces -> %@", interfaces);
+    
+    for (NSString *interfaceName in interfaces) {
+        CFDictionaryRef dictRef = CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName);
+        if (dictRef != NULL) {
+            NSDictionary *networkInfo = (__bridge NSDictionary *)dictRef;
+            NSLog(@"network info -> %@", networkInfo);
+            CFRelease(dictRef);
+        }
+    }
+    CFRelease(arrayRef);
 
 }
 

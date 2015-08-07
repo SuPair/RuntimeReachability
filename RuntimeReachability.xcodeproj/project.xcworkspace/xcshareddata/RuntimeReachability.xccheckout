@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>88EFCE6A-35E7-4D3D-A4E0-357028627A25</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RuntimeReachability</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>24CCCAE8AAC848F538F865C3632E34D4B719A1AB</key>
+		<string>https://github.com/SuPair/RuntimeReachability.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RuntimeReachability.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>24CCCAE8AAC848F538F865C3632E34D4B719A1AB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SuPair/RuntimeReachability.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>24CCCAE8AAC848F538F865C3632E34D4B719A1AB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>24CCCAE8AAC848F538F865C3632E34D4B719A1AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RuntimeReachability</string>
+		</dict>
+	</array>
+</dict>
+</plist>
